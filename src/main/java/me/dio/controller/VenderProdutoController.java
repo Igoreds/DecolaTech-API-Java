@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+
+@Tag(name = "Vender Produto")
 @RestController
 @RequestMapping("/vendas")
 public class VenderProdutoController {
@@ -16,7 +21,9 @@ public class VenderProdutoController {
         this.venderProdutoService = venderProdutoService;
     }
 
+    
     @PostMapping("/vender")
+    @Operation(summary = "Vender um produto")
     public ResponseEntity<String> venderProduto(@RequestParam Long produtoId, @RequestParam int quantidadeVendida) {
         String mensagem = venderProdutoService.venderProduto(produtoId, quantidadeVendida);
         return ResponseEntity.ok(mensagem);
