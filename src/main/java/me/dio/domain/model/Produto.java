@@ -4,30 +4,28 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
+
+@Data
 @Entity(name = "Produtos")
 public class Produto {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Setter
-    @Getter
+
     private String nome;
 
-    @Setter
-    @Getter
+
     private String categoria;
 
-    @Setter
-    @Getter
+
     private Double preco;
 
-    @Setter
-    @Getter
+
     private Integer quantidade;
 
     public Produto() {
