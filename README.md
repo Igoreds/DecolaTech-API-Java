@@ -17,11 +17,9 @@ Este é um sistema de gerenciamento de estoque e vendas desenvolvido com Java e 
 
 ### 🔹 Gerenciamento de Estoque
 
-<<<<<<< HEAD
 Adicionar um produto ➝ Cadastra um novo produto no banco de  dados.
-=======
-Adicionar um produto ➝ Cadastra um novo produto no banco de dados..
->>>>>>> c3f3e77 (Readme atualização)
+
+Adicionar um produto ➝ Cadastra um novo produto no banco de dados.
 
 Atualizar um produto ➝ Atualiza as informações de um produto existente.
 
