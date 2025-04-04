@@ -100,7 +100,7 @@ http://localhost:8080/swagger-ui/index.html
 
 O projeto está implantado no Railway. Você pode acessá-lo em:
 
-http://decolatech-api-java-production.up.railway.app/swagger-ui/index.html
+http://decolatech-api-java-production.up.railway.app/swagger-ui/index.html (desativado)
 
 ### Desenvolvido por [Igor Silva](https://github.com/igoreds). 🧡
 
