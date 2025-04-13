@@ -12,7 +12,8 @@ import java.util.List;
 
 @Tag(name = "Gerenciamento de Estoque")
 @RestController
-@CrossOrigin(origins = "https://angular-api-estoque.vercel.app")
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/produtos")
 public class ProdutoController {
     private final ProdutoService produtoService;

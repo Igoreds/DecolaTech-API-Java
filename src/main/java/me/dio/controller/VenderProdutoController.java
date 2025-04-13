@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Vender Produto")
 @RestController
-@CrossOrigin(origins = "https://angular-api-estoque.vercel.app")
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/vendas")
 public class VenderProdutoController {
     private final VenderProdutoService venderProdutoService;
