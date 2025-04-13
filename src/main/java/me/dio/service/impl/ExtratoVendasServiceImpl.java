@@ -27,7 +27,7 @@ public class ExtratoVendasServiceImpl implements ExtratoVendasService {
         double valorTotalGeral = vendas.stream().mapToDouble(VenderProdutos::getValorTotal).sum();
 
         Map<Long, Double> valorTotalPorProduto = vendas.stream()
-                .collect(Collectors.groupingBy(VenderProdutos::getProdutoId, 
+                .collect(Collectors.groupingBy(VenderProdutos::getProdutoId,
                         Collectors.summingDouble(VenderProdutos::getValorTotal)));
 
         Map<String, Object> resultado = new HashMap<>();

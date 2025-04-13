@@ -2,10 +2,7 @@ package me.dio.controller;
 
 import me.dio.service.VenderProdutoService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -13,6 +10,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @Tag(name = "Vender Produto")
 @RestController
+@CrossOrigin(origins = "https://angular-api-estoque.vercel.app")
 @RequestMapping("/vendas")
 public class VenderProdutoController {
     private final VenderProdutoService venderProdutoService;
