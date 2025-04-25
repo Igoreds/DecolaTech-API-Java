@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 @Tag(name = "Vender Produto")
 @RestController
@@ -19,11 +22,15 @@ public class VenderProdutoController {
         this.venderProdutoService = venderProdutoService;
     }
 
-    
+
     @PostMapping("/vender")
     @Operation(summary = "Vender um produto")
-    public ResponseEntity<String> venderProduto(@RequestParam Long produtoId, @RequestParam int quantidadeVendida) {
+    public ResponseEntity<Map<String, String>> venderProduto(@RequestParam Long produtoId, @RequestParam int quantidadeVendida) {
         String mensagem = venderProdutoService.venderProduto(produtoId, quantidadeVendida);
-        return ResponseEntity.ok(mensagem);
+
+        Map<String, String> resposta = new HashMap<>();
+        resposta.put("mensagem", mensagem);
+
+        return ResponseEntity.ok(resposta); 
     }
 }
